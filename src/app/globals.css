@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base CSS Variables for Obsidian (Dark Creative Agency) */
+:root,
+[data-theme="obsidian"] {
+  --bg-primary: #09090b;
+  --bg-secondary: #121216;
+  --bg-tertiary: #18181f;
+  --bg-elevated: #22222c;
+  --bg-glass: rgba(18, 18, 22, 0.75);
+  
+  --text-primary: #f4f4f7;
+  --text-secondary: #9ea1af;
+  --text-tertiary: #676a78;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  --theme-grain-opacity: 0.035;
+  --theme-grid-opacity: 0.05;
+}
+
+/* Base CSS Variables for Ivory (Minimal Luxury Studio) */
+[data-theme="ivory"] {
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f2eee6;
+  --bg-tertiary: #e7e1d5;
+  --bg-elevated: #ded6c8;
+  --bg-glass: rgba(250, 248, 245, 0.82);
+  
+  --text-primary: #121214;
+  --text-secondary: #4d4f58;
+  --text-tertiary: #7c7e8b;
+  
+  --border-subtle: rgba(18, 18, 20, 0.09);
+  --border-strong: rgba(18, 18, 20, 0.22);
+  
+  --card-shadow: 0 15px 35px -10px rgba(70, 60, 50, 0.08);
+  --theme-grain-opacity: 0.025;
+  --theme-grid-opacity: 0.04;
+}
+
+/* Accent Color Variations */
+[data-accent="blue"] {
+  --accent-current: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.25);
+  --accent-hover: #2563eb;
+  --accent-subtle: rgba(59, 130, 246, 0.12);
+}
+[data-theme="ivory"][data-accent="blue"] {
+  --accent-current: #1d4ed8;
+  --accent-glow: rgba(29, 78, 216, 0.18);
+  --accent-hover: #1e40af;
+  --accent-subtle: rgba(29, 78, 216, 0.09);
+}
+
+[data-accent="violet"] {
+  --accent-current: #8b5cf6;
+  --accent-glow: rgba(139, 92, 246, 0.25);
+  --accent-hover: #7c3aed;
+  --accent-subtle: rgba(139, 92, 246, 0.12);
+}
+[data-theme="ivory"][data-accent="violet"] {
+  --accent-current: #6d28d9;
+  --accent-glow: rgba(109, 40, 217, 0.18);
+  --accent-hover: #5b21b6;
+  --accent-subtle: rgba(109, 40, 217, 0.09);
+}
+
+[data-accent="orange"] {
+  --accent-current: #f97316;
+  --accent-glow: rgba(249, 115, 22, 0.25);
+  --accent-hover: #ea580c;
+  --accent-subtle: rgba(249, 115, 22, 0.12);
+}
+[data-theme="ivory"][data-accent="orange"] {
+  --accent-current: #c2410c;
+  --accent-glow: rgba(194, 65, 12, 0.18);
+  --accent-hover: #9a3412;
+  --accent-subtle: rgba(194, 65, 12, 0.09);
+}
+
+[data-accent="green"] {
+  --accent-current: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.25);
+  --accent-hover: #059669;
+  --accent-subtle: rgba(16, 185, 129, 0.12);
+}
+[data-theme="ivory"][data-accent="green"] {
+  --accent-current: #047857;
+  --accent-glow: rgba(4, 120, 87, 0.18);
+  --accent-hover: #065f46;
+  --accent-subtle: rgba(4, 120, 87, 0.09);
+}
+
+/* Reduced Motion Mode Support */
+[data-motion="minimal"] * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Global Document Reset */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+/* Custom Selection Styling */
+::selection {
+  background-color: var(--accent-current);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-current);
+}
+
+/* Noise Texture Overlay */
+.bg-grain-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+}
+
+/* Precision Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+}
+
+/* Typography styles based on Theme */
+[data-theme="obsidian"] .font-editorial {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+[data-theme="ivory"] .font-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Subtle Glow and Glass Utilities */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-current) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
