@@ -24,7 +24,6 @@ A high-end, conversion-focused personal portfolio website engineered for **Deepa
   - **Prime Arc Studio**: Contemporary interior architecture & spatial design showcase with CAD vectors.
   - **Arya Dental Care**: Super-speciality dental clinic platform with digital appointment workflows.
   - **Arrive Hotels**: Boutique hotel platform across 5 US destinations by Palisociety.
-  - **Supreet Insurance**: Independent Canadian insurance brokerage & wealth advisory platform.
   - **Nugen Atria**: Cloud-native hotel management OS (PMS) & guest mobile ordering SaaS.
 - **View Mode Switcher & Category Filters**:
   - Grid View & Listing View options.

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Eye, FileText, X, CheckCircle, ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
@@ -9,44 +9,43 @@ import { MagneticButton } from "../ui/MagneticButton";
 export function ResumeCTA() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
+  // Prevent background scrolling when quick view modal is open
+  useEffect(() => {
+    if (isPreviewOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isPreviewOpen]);
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isPreviewOpen) {
+        setIsPreviewOpen(false);
+      }
+    };
+    if (isPreviewOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isPreviewOpen]);
+
   const handleDownload = () => {
-    // Generate a clean text/pdf download or open data URI
-    const resumeText = `Deepanshu Dhingra — Full Stack Developer
-Location: Mohali, Punjab, India
-Email: dhingradeepanshu400@gmail.com
-Experience: 4 Years
-
-Summary:
-Full Stack Developer crafting scalable, responsive, and high-performance web applications with React, Next.js, TypeScript, Node.js, and modern cloud ecosystems.
-
-Selected Projects Delivered:
-1. Capgro Finex (Fintech & Loan Distribution) — https://www.capgrofinex.com/
-2. Prime Arc Studio (Spatial Architecture & Interiors) — https://prime-arc-mauve.vercel.app/
-3. Arya Dental Care (Super-Speciality Healthcare) — https://arya-dental-care-nine.vercel.app/
-4. Arrive Hotels (Boutique Hospitality by Palisociety) — https://www.arrivehotels.com/
-5. Supreet Insurance (Insurance & Wealth Advisory) — https://supreetinsurnace.com/
-6. Nugen Atria (Hospitality Operating System SaaS) — https://nugenatria.com/
-
-Technical Core:
-- Frontend: React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, SASS, Framer Motion
-- Backend: Node.js, NestJS, Express.js, REST APIs, WebSockets, JWT, Event-driven architecture
-- Databases: MongoDB, PostgreSQL, SQL, Mongoose
-- State & Data: Redux Toolkit, TanStack Query
-- Cloud & Tools: AWS, Docker, CI/CD, Git, GitHub, Postman, Jira
-`;
-
-    const blob = new Blob([resumeText], { type: "text/plain;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.href = url;
-    link.download = "Deepanshu_Dhingra_Resume.txt";
+    link.href = "/Deepanshu_Dhingra_Resume.pdf";
+    link.download = "Deepanshu_Dhingra_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <section className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-bg border-b border-border">
+    <section id="resume" className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-bg border-b border-border">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -66,24 +65,25 @@ Technical Core:
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-ink font-editorial">
-                Want the detailed version?
+                Want the detailed resume?
               </h2>
 
               <p className="text-base sm:text-lg text-ink-muted font-light leading-relaxed">
-                Download my resume for a closer look at my professional trajectory, technology competencies, and architectural track record.
+                Download my official resume featuring technical competencies, project deliverables with GSAP &amp; Next.js, and professional experience.
               </p>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
-              <MagneticButton
-                onClick={handleDownload}
+              <a
+                href="/Deepanshu_Dhingra_Resume.pdf"
+                download="Deepanshu_Dhingra_Resume.pdf"
                 data-cursor="cta"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-accent text-white font-mono text-xs uppercase tracking-wider font-semibold hover:bg-accent-hover transition-all flex items-center justify-center gap-2 shadow-lg group cursor-pointer"
               >
                 <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
-                <span>Download Resume</span>
-              </MagneticButton>
+                <span>Download Resume (PDF)</span>
+              </a>
 
               <MagneticButton
                 onClick={() => setIsPreviewOpen(true)}
@@ -125,7 +125,7 @@ Technical Core:
                   <FileText className="w-5 h-5 text-accent" />
                   <div>
                     <h3 className="text-base font-bold text-ink font-display">Deepanshu Dhingra</h3>
-                    <p className="text-xs text-ink-muted">Full Stack Developer · 4 Years Experience</p>
+                    <p className="text-xs text-ink-muted">Frontend Developer · 2+ Years Experience</p>
                   </div>
                 </div>
                 <button
@@ -144,7 +144,7 @@ Technical Core:
                     Professional Summary
                   </h4>
                   <p className="text-ink-muted">
-                    Full Stack Developer based in Mohali, Punjab with 4 years of proven hands-on experience building high-performance web applications. Specialized in scalable React and Next.js architectures, secure Node.js/NestJS REST backends, real-time WebSockets, and modern containerized deployment pipelines.
+                    Frontend Developer based in Mohali, Punjab with 2+ years of hands-on experience building fast, scalable, and responsive web applications. Specialized in React.js, Next.js, TypeScript, GSAP animations, Tailwind CSS, and robust state management.
                   </p>
                 </div>
 
@@ -152,40 +152,48 @@ Technical Core:
                   <h4 className="font-mono text-xs font-bold uppercase text-accent tracking-wider mb-2">
                     Core Technical Competencies
                   </h4>
-                  <div className="grid grid-cols-2 gap-3 text-xs font-mono text-ink-muted">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-ink-muted">
                     <div className="p-3 rounded-lg bg-bg-secondary border border-border">
-                      <span className="font-semibold text-ink block mb-1">Frontend:</span>
-                      React.js, Next.js, TypeScript, Tailwind CSS, Material UI, Framer Motion
+                      <span className="font-semibold text-ink block mb-1">Frontend &amp; UI:</span>
+                      React.js, Next.js, TypeScript, JavaScript (ES6+), GSAP &amp; ScrollTrigger, Tailwind CSS, Material UI, SASS
                     </div>
                     <div className="p-3 rounded-lg bg-bg-secondary border border-border">
-                      <span className="font-semibold text-ink block mb-1">Backend &amp; DB:</span>
-                      Node.js, NestJS, Express, REST APIs, WebSockets, PostgreSQL, MongoDB
+                      <span className="font-semibold text-ink block mb-1">State &amp; Architecture:</span>
+                      Redux Toolkit, TanStack Query, Context API, Formik, React Hook Form, Zod, REST APIs, GraphQL, WebSockets
                     </div>
                   </div>
                 </div>
 
                 <div>
                   <h4 className="font-mono text-xs font-bold uppercase text-accent tracking-wider mb-2">
-                    Featured Project Portfolio
+                    Featured Commercial Projects
                   </h4>
-                  <ul className="space-y-2 text-xs text-ink-muted">
-                    <li>• <strong>CapGro Finex</strong>: Fintech loan comparison platform with zero-fee disclosures</li>
-                    <li>• <strong>Prime Arc Studio</strong>: Interior spatial design digital editorial experience</li>
-                    <li>• <strong>Arya Dental Care</strong>: Super-speciality clinical patient platform with online booking</li>
-                    <li>• <strong>Arrive Hotels</strong>: Multi-city boutique hotel platform by Palisociety</li>
-                    <li>• <strong>Supreet Insurance</strong>: Canadian insurance &amp; registered wealth advisory</li>
-                    <li>• <strong>Nugen Atria</strong>: Cloud-native hotel management system &amp; guest ordering SaaS</li>
+                  <ul className="space-y-2.5 text-xs text-ink-muted">
+                    <li>• <strong>NuGen Atria</strong>: Hospitality SaaS admin dashboard &amp; guest portal with WebSocket feeds and real-time room status.</li>
+                    <li>• <strong>Arrive Hotels</strong>: Luxury hospitality platform (Palisociety) with Next.js, GSAP animations, and GraphQL / REST APIs.</li>
+                    <li>• <strong>CapGro Finex</strong>: Fintech platform with interactive EMI calculators, GSAP ScrollTrigger reveals, and Formik/Zod validation.</li>
+                    <li>• <strong>Money Parking (FundPilot)</strong>: Mutual fund tracking platform featuring real-time XIRR calculations, interactive tables, and Redux Toolkit.</li>
                   </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-mono text-xs font-bold uppercase text-accent tracking-wider mb-2">
+                    Education
+                  </h4>
+                  <p className="text-xs text-ink-muted font-mono">
+                    Bachelor of Computer Applications (BCA)
+                  </p>
                 </div>
 
                 <div className="pt-4 border-t border-border flex items-center justify-between">
                   <span className="text-xs font-mono text-ink-muted">{siteConfig.email}</span>
-                  <button
-                    onClick={handleDownload}
-                    className="px-4 py-2 rounded-lg bg-accent text-white text-xs font-mono uppercase tracking-wider font-semibold"
+                  <a
+                    href="/Deepanshu_Dhingra_Resume.pdf"
+                    download="Deepanshu_Dhingra_Resume.pdf"
+                    className="px-4 py-2 rounded-lg bg-accent text-white text-xs font-mono uppercase tracking-wider font-semibold hover:bg-accent-hover transition-colors"
                   >
                     Download Copy
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

@@ -10,11 +10,9 @@ export function TechNetwork() {
 
   const icons: Record<string, React.ElementType> = {
     frontend: Layers,
-    backend: Server,
-    databases: Database,
-    cloud: Cloud,
-    state: Layers,
-    tools: Wrench,
+    "state-data": Layers,
+    "apis-services": Server,
+    "tools-workflow": Wrench,
   };
 
   const activeCategoryData = skillCategories.find((c) => c.id === selectedCategory) || skillCategories[0];
@@ -28,12 +26,12 @@ export function TechNetwork() {
           <span>Interactive Constellation</span>
         </div>
 
-        {/* Central Full Stack Core Indicator */}
+        {/* Central Frontend Core Indicator */}
         <div className="relative flex items-center justify-center">
           <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-accent/40 bg-bg flex flex-col items-center justify-center p-2 shadow-2xl z-10">
             <span className="w-2.5 h-2.5 rounded-full bg-accent animate-ping mb-1" />
             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-ink">
-              FULL STACK
+              FRONTEND
             </span>
             <span className="text-[9px] font-mono text-ink-muted uppercase">Core Kernel</span>
           </div>
@@ -95,21 +93,11 @@ export function TechNetwork() {
             {activeCategoryData.skills.map((skill) => (
               <div
                 key={skill.name}
-                className={`p-3.5 rounded-xl border text-left transition-all ${
-                  skill.highlight
-                    ? "border-accent/40 bg-accent-subtle/30 shadow-sm"
-                    : "border-border bg-bg-secondary/40 hover:border-ink-muted/40"
-                }`}
+                className="p-3.5 rounded-xl border border-border bg-bg-secondary/40 hover:border-accent/40 hover:bg-bg transition-all flex items-center"
               >
-                <div className="text-xs sm:text-sm font-semibold text-ink font-display flex items-center justify-between">
-                  <span>{skill.name}</span>
-                  {skill.highlight && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  )}
-                </div>
-                <div className="text-[10px] font-mono text-ink-muted mt-1 uppercase">
-                  {skill.level}
-                </div>
+                <span className="text-xs sm:text-sm font-semibold text-ink font-display">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>
