@@ -14,7 +14,7 @@ export function Experience() {
           number="06"
           category="CAREER TRAJECTORY"
           title="Experience &amp; Industry Impact."
-          subtitle="4 years of full-stack engineering delivering real commercial systems across hospitality, fintech, healthcare, and SaaS."
+          subtitle="2+ years of frontend engineering delivering real commercial systems across hospitality, fintech, healthcare, and SaaS."
         />
 
         {/* Editorial Scroll-Progressive Timeline */}
