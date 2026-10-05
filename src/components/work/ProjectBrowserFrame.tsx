@@ -17,7 +17,7 @@ export function ProjectBrowserFrame({ project, className = "", aspect = "auto" }
   return (
     <div
       data-cursor="project"
-      className={`relative w-full h-full rounded-2xl overflow-hidden border border-border bg-bg-secondary flex flex-col shadow-2xl group/frame ${className}`}
+      className={`relative w-full rounded-2xl overflow-hidden border border-border bg-bg-secondary flex flex-col shadow-2xl group/frame ${className}`}
     >
       {/* Top Browser Header Bar */}
       <div className="h-9 px-4 border-b border-border/80 bg-bg-secondary/90 backdrop-blur-md flex items-center justify-between z-20 flex-shrink-0 select-none">
@@ -46,15 +46,15 @@ export function ProjectBrowserFrame({ project, className = "", aspect = "auto" }
         </a>
       </div>
 
-      {/* Real Website Screenshot Container */}
-      <div className="relative w-full flex-1 min-h-[260px] sm:min-h-[340px] overflow-hidden bg-bg">
+      {/* Real Website Screenshot Container - 16:10 exact aspect ratio for full uncropped capture */}
+      <div className="relative w-full aspect-[16/10] overflow-hidden bg-bg">
         {project.image ? (
           <Image
             src={project.image}
             alt={`${project.title} live landing page capture`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-            className="object-cover object-top transition-transform duration-700 ease-out group-hover/frame:scale-105"
+            className="object-contain object-top transition-transform duration-500 ease-out group-hover/frame:scale-[1.02]"
             priority={project.number === "01" || project.number === "02"}
           />
         ) : (

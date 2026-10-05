@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Project } from "@/types";
-import { ExternalLink, ShieldCheck, Compass, Sparkles, Hotel, HeartHandshake, Cloud } from "lucide-react";
+import { ExternalLink, ShieldCheck, Compass, Sparkles, Hotel, HeartHandshake, Cloud, TrendingUp } from "lucide-react";
 
 interface ProjectVisualMockupProps {
   project: Project;
@@ -69,49 +69,80 @@ export function ProjectVisualMockup({ project }: ProjectVisualMockupProps) {
         </div>
       );
 
-    case "prime-arc":
+    case "money-parking":
       return (
-        <div className="w-full h-full bg-[#09090b] text-[#f4f4f5] p-6 sm:p-8 flex flex-col justify-between select-none relative overflow-hidden group/mock">
-          {/* CAD Grid Overlay */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+        <div className="w-full h-full bg-[#0a0f1d] text-[#f8fafc] p-6 sm:p-8 flex flex-col justify-between select-none relative overflow-hidden group/mock">
+          {/* Subtle Grid Pattern Overlay */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-15" />
 
-          {/* CAD Diagram Lines */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-stone-700/50" viewBox="0 0 400 300">
-            <line x1="0" y1="150" x2="400" y2="150" strokeWidth="0.5" strokeDasharray="4 4" />
-            <line x1="200" y1="0" x2="200" y2="300" strokeWidth="0.5" strokeDasharray="4 4" />
-            <circle cx="200" cy="150" r="90" stroke="#d4af37" strokeWidth="0.75" strokeDasharray="5 5" fill="none" />
-            <rect x="130" y="90" width="140" height="120" stroke="rgba(255,255,255,0.3)" strokeWidth="0.75" fill="none" />
-            <text x="20" y="30" fill="#d4af37" fontSize="9" fontFamily="monospace" letterSpacing="1">SCALE 1:50 · SPATIAL BOUNDARY</text>
-          </svg>
+          {/* Glowing accent backdrop */}
+          <div className="absolute -top-16 -right-16 w-48 h-48 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none" />
 
           {/* Header */}
-          <div className="relative z-10 flex items-center justify-between border-b border-stone-800 pb-4">
+          <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs shadow-md">
+                ₹
+              </span>
+              <div>
+                <span className="font-display font-bold text-sm tracking-tight text-white lowercase">
+                  money<span className="text-blue-400">parking</span>
+                </span>
+                <span className="hidden sm:inline-block ml-2 px-1.5 py-0.5 rounded text-[9px] font-mono uppercase tracking-wider bg-blue-500/15 text-blue-300 border border-blue-500/30">
+                  Park it. Grow it.
+                </span>
+              </div>
+            </div>
             <div className="flex items-center gap-2">
-              <Compass className="w-4 h-4 text-[#d4af37]" />
-              <span className="font-mono text-xs tracking-[0.25em] text-stone-200 uppercase font-semibold">
-                PRIME ARC STUDIO
+              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Auto NAV Sync
               </span>
             </div>
-            <span className="text-[9px] font-mono tracking-widest text-[#d4af37]">MOHALI // TRICITY</span>
           </div>
 
-          {/* Architectural Statement */}
-          <div className="relative z-10 my-auto py-6 max-w-sm">
-            <div className="text-[10px] font-mono tracking-[0.3em] text-[#d4af37] uppercase mb-2">
-              INTERIOR ARCHITECTURE
+          {/* Wealthtech Dashboard Card */}
+          <div className="relative z-10 my-auto py-4 space-y-3.5">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="flex items-center gap-1.5 font-medium">
+                  <TrendingUp className="w-3.5 h-3.5 text-blue-400" />
+                  Portfolio Analytics &amp; XIRR
+                </span>
+                <span className="text-emerald-400 font-mono text-[11px] font-semibold">Active Book</span>
+              </div>
+              <div className="flex items-baseline gap-2 mt-1">
+                <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white">
+                  Mutual Fund Tracker
+                </span>
+                <span className="text-xs text-slate-400">Distributor Suite</span>
+              </div>
             </div>
-            <h4 className="text-xl sm:text-2xl font-bold tracking-tight text-stone-100 uppercase font-display leading-tight">
-              SPACES WITH A POINT OF VIEW.
-            </h4>
-            <p className="text-xs text-stone-400 mt-2 font-light leading-relaxed">
-              Material, light, proportion &amp; quiet craftsmanship. Unfilled travertine &amp; smoked oak joinery.
-            </p>
+
+            {/* Quick Badges */}
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="bg-white/[0.03] border border-white/5 rounded-lg p-2.5">
+                <div className="text-[10px] text-slate-400 font-mono uppercase">Distributors</div>
+                <div className="text-xs font-bold text-white mt-0.5">Portal Active</div>
+              </div>
+              <div className="bg-white/[0.03] border border-white/5 rounded-lg p-2.5">
+                <div className="text-[10px] text-slate-400 font-mono uppercase">NAV Updates</div>
+                <div className="text-xs font-bold text-white mt-0.5">Daily Sync</div>
+              </div>
+              <div className="bg-white/[0.03] border border-white/5 rounded-lg p-2.5">
+                <div className="text-[10px] text-slate-400 font-mono uppercase">Verification</div>
+                <div className="text-xs font-bold text-emerald-400 mt-0.5">ARN Ready</div>
+              </div>
+            </div>
           </div>
 
           {/* Footer Metadata */}
-          <div className="relative z-10 flex items-center justify-between text-[10px] font-mono text-stone-500 border-t border-stone-800 pt-3">
-            <span>[30°41&apos;N 76°45&apos;E]</span>
-            <span className="text-stone-300">EXPLORE WORK ↓</span>
+          <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-slate-400 border-t border-white/10 pt-3">
+            <span>MUTUAL FUND PLATFORM</span>
+            <span className="text-blue-400 font-semibold flex items-center gap-1">
+              LIVE PLATFORM <ExternalLink className="w-3 h-3" />
+            </span>
           </div>
         </div>
       );
@@ -134,7 +165,7 @@ export function ProjectVisualMockup({ project }: ProjectVisualMockupProps) {
               </div>
             </div>
             <span className="px-2 py-0.5 rounded-full text-[10px] bg-teal-500/20 text-teal-300 border border-teal-500/30">
-              5.0★ Google Rated
+              Verified Practice
             </span>
           </div>
 
@@ -145,7 +176,7 @@ export function ProjectVisualMockup({ project }: ProjectVisualMockupProps) {
               <span>SUPER-SPECIALITY PRACTICE</span>
             </div>
             <div className="text-lg sm:text-xl font-bold font-display leading-snug">
-              Evidence-based dentistry backed by <span className="italic text-teal-300 font-serif">35+ years</span> clinical heritage.
+              Evidence-based clinical dentistry with digital appointment scheduling.
             </div>
             <div className="grid grid-cols-2 gap-2 pt-2 text-[11px] text-slate-300">
               <div className="p-2 rounded bg-white/5 border border-white/5">
@@ -203,44 +234,6 @@ export function ProjectVisualMockup({ project }: ProjectVisualMockupProps) {
           <div className="relative z-10 flex items-center justify-between text-[10px] font-mono text-stone-400 border-t border-white/10 pt-3">
             <span>LOWKEY LUXURIES · BESPOKE DESIGN</span>
             <span className="text-[#c60000] font-semibold">EXPLORE STAY ↗</span>
-          </div>
-        </div>
-      );
-
-    case "supreet-insurance":
-      return (
-        <div className="w-full h-full bg-[#0a192f] text-white p-6 sm:p-8 flex flex-col justify-between select-none relative overflow-hidden group/mock">
-          {/* Header */}
-          <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-4">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-xs">
-                SI
-              </div>
-              <span className="font-semibold text-sm">Supreet Insurance</span>
-            </div>
-            <span className="text-[10px] font-mono text-blue-400">Ontario, Canada</span>
-          </div>
-
-          {/* Content Card */}
-          <div className="relative z-10 my-4 bg-blue-950/60 border border-blue-800/40 rounded-xl p-5 space-y-3">
-            <div className="flex items-center gap-1.5 text-xs text-blue-300 font-mono">
-              <HeartHandshake className="w-4 h-4" />
-              <span>PROTECTION &amp; WEALTH ADVISORY</span>
-            </div>
-            <div className="text-base sm:text-lg font-bold">
-              Tailored coverage for Auto, Home, Commercial &amp; Visitor Super Visa.
-            </div>
-            <div className="grid grid-cols-3 gap-1.5 pt-1 text-center font-mono text-[10px]">
-              <div className="p-2 rounded bg-blue-900/40 border border-blue-700/30 text-blue-200">RRSP</div>
-              <div className="p-2 rounded bg-blue-900/40 border border-blue-700/30 text-blue-200">TFSA</div>
-              <div className="p-2 rounded bg-blue-900/40 border border-blue-700/30 text-blue-200">FHSA</div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="relative z-10 flex items-center justify-between text-[10px] font-mono text-blue-300 border-t border-white/10 pt-3">
-            <span>INDEPENDENT BROKERAGE</span>
-            <span className="text-blue-400">REQUEST QUOTE →</span>
           </div>
         </div>
       );

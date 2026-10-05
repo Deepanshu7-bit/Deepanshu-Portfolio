@@ -20,11 +20,11 @@ export function TrustStrip() {
               <span>Proven Experience</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-ink font-editorial">
-              4+ Years Building For The Modern Web
+              2+ Years Building For The Modern Web
             </h2>
           </div>
           <p className="text-sm text-ink-muted max-w-md font-light leading-relaxed">
-            Delivering production-grade applications that blend creative agency visual polish with scalable backend engineering.
+            Delivering responsive, production-ready web applications with clean component architecture and fluid user experiences.
           </p>
         </div>
 
