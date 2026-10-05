@@ -22,7 +22,7 @@ export function ProjectGridCard({ project, index }: ProjectGridCardProps) {
       className="group flex flex-col justify-between rounded-3xl border border-border bg-bg-secondary/30 hover:border-accent/50 hover:bg-bg-secondary/60 transition-all duration-500 overflow-hidden shadow-lg p-5 sm:p-6"
     >
       {/* Top Browser Screenshot Viewport */}
-      <div className="w-full h-64 sm:h-72 mb-6">
+      <div className="w-full mb-6">
         <ProjectBrowserFrame project={project} />
       </div>
 

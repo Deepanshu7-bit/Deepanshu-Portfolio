@@ -9,7 +9,7 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    projectType: "Full Stack Web Application",
+    projectType: "Next.js Frontend & Creative UI",
     budget: "$2,000 — $5,000",
     message: "",
   });
@@ -62,7 +62,7 @@ export function ContactForm() {
             setFormData({
               name: "",
               email: "",
-              projectType: "Full Stack Web Application",
+              projectType: "Next.js Frontend & Creative UI",
               budget: "$2,000 — $5,000",
               message: "",
             });
@@ -140,11 +140,11 @@ export function ContactForm() {
             onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
             className="w-full px-4 py-3 rounded-xl border border-border bg-bg text-ink text-sm transition-all focus:outline-none focus:ring-2 focus:ring-accent"
           >
-            <option>Full Stack Web Application</option>
             <option>Next.js Frontend &amp; Creative UI</option>
-            <option>Backend Architecture &amp; REST APIs</option>
+            <option>React &amp; TypeScript Web Application</option>
+            <option>Design System &amp; Component Architecture</option>
+            <option>Performance Optimization &amp; Audit</option>
             <option>MVP Build from Zero to One</option>
-            <option>Technical Consultation &amp; Audit</option>
           </select>
         </div>
 
