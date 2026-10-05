@@ -4,12 +4,12 @@ export const experienceData: ExperienceItem[] = [
   {
     id: "exp-1",
     period: "2023 — Present",
-    role: "Senior Full Stack Developer",
+    role: "Senior Frontend Developer",
     companyOrScope: "High-Growth Product Development & Client Architecture",
     location: "Mohali, Punjab, India",
     industry: "Hospitality, SaaS, Fintech",
     summary:
-      "Leading full-stack application architecture and end-to-end delivery for high-traffic client platforms, hotel management operating systems, and regulated financial portals.",
+      "Leading frontend application architecture and end-to-end user experience delivery for high-traffic client platforms, hotel management operating systems, and regulated financial portals.",
     highlights: [
       "Architected and deployed responsive Next.js applications with Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR), boosting page speeds significantly.",
       "Engineered high-throughput NestJS and Express REST APIs with PostgreSQL and MongoDB database persistence.",
@@ -20,13 +20,13 @@ export const experienceData: ExperienceItem[] = [
   },
   {
     id: "exp-2",
-    period: "2021 — 2023",
-    role: "Full Stack Developer",
+    period: "2022 — 2023",
+    role: "Frontend Developer",
     companyOrScope: "Product Engineering & Enterprise Applications",
     location: "Mohali / Chandigarh Region, India",
-    industry: "Healthcare, Insurance & Spatial Tech",
+    industry: "Healthcare, Wealthtech & Financial Services",
     summary:
-      "Engineered specialized web solutions ranging from healthcare patient management funnels to high-precision architectural showcases and insurance distribution portals.",
+      "Engineered specialized web solutions ranging from healthcare patient management funnels to mutual fund distribution workflows and financial portals.",
     highlights: [
       "Built resilient, accessibility-compliant user interfaces with React, Tailwind CSS, and custom Framer Motion animations.",
       "Integrated third-party authentication protocols, role-based access control (RBAC), and JWT token refresh flows.",

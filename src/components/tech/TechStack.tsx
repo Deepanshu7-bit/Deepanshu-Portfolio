@@ -11,8 +11,8 @@ export function TechStack() {
         <SectionHeader
           number="04"
           category="TECHNICAL TOOLKIT"
-          title="Engineered for full-stack precision."
-          subtitle="A comprehensive inventory of modern languages, libraries, databases, and infrastructure tools backed by 4 years of hands-on production code."
+          title="Engineered for frontend precision."
+          subtitle="A comprehensive inventory of modern languages, libraries, databases, and infrastructure tools backed by 2+ years of hands-on production code."
         />
 
         {/* Interactive Constellation Hub */}
