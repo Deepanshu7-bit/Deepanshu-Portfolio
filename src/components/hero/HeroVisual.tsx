@@ -80,13 +80,13 @@ export function HeroVisual() {
           <Terminal className="w-6 h-6" />
         </div>
         <div className="text-xs font-mono uppercase tracking-widest text-accent font-semibold mb-1">
-          Full Stack Architecture
+          Frontend Architecture
         </div>
         <div className="text-base sm:text-lg font-bold text-ink font-display">
           Deepanshu Dhingra
         </div>
         <p className="text-[11px] text-ink-muted mt-1 leading-relaxed">
-          4 Years of resilient frontend interfaces, scalable backend systems &amp; cloud automation.
+          2+ Years of resilient frontend interfaces, interactive design &amp; web performance.
         </p>
         <div className="mt-4 pt-3 border-t border-border flex items-center justify-center gap-2 text-[10px] font-mono text-ink-faint">
           <Shield className="w-3 h-3 text-accent" />
