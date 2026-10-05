@@ -1,0 +1,21 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feature/resume-and-theme",
+    "main",
+    "origin",
+    "update-portfolio"
+  ],
+  "parent": {
+    "feature/resume-and-theme": "main",
+    "main": null,
+    "origin": "main",
+    "update-portfolio": "main"
+  },
+  "order": [
+    "main",
+    "feature/resume-and-theme",
+    "origin",
+    "update-portfolio"
+  ]
+}

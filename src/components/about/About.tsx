@@ -3,16 +3,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionHeader } from "../ui/SectionHeader";
-import { CheckCircle2, Code, Cpu, Globe, Rocket, Shield, Terminal } from "lucide-react";
+import { Bot, CheckCircle2, Code, Cpu, Globe, Rocket, Shield, Sparkles, Terminal } from "lucide-react";
 
 export function About() {
   const focusAreas = [
-    { label: "Scalable Frontend Applications", icon: Globe, desc: "React, Next.js App Router, SSR/ISR architectures" },
-    { label: "High-Throughput Backend APIs", icon: Terminal, desc: "Node.js, NestJS, REST endpoints, WebSockets" },
-    { label: "Responsive Interfaces & Design Systems", icon: Code, desc: "Fluid typography, Tailwind CSS, micro-interactions" },
-    { label: "Data Modeling & Persistence", icon: Cpu, desc: "PostgreSQL, MongoDB, Redis caching, ORMs" },
-    { label: "Performance & Web Vitals", icon: Rocket, desc: "Sub-second load times, code-splitting, image optimization" },
-    { label: "Cloud & Production CI/CD", icon: Shield, desc: "Docker containers, AWS provisioning, automated releases" },
+    { label: "Modern React & Next.js", icon: Globe, desc: "Next.js App Router, React 19, and server/client component architectures" },
+    { label: "AI-Augmented Development", icon: Sparkles, desc: "Leveraging cutting-edge AI tools to accelerate iteration velocity, test coverage, and code precision" },
+    { label: "State & API Integration", icon: Terminal, desc: "Predictable data fetching with TanStack Query, Redux Toolkit, and REST APIs" },
+    { label: "Responsive Design Systems", icon: Code, desc: "Design tokens, Tailwind CSS, mobile-first responsive grid layouts" },
+    { label: "Interactive Animations", icon: Cpu, desc: "Smooth micro-interactions and transitions with GSAP and Framer Motion" },
+    { label: "Performance & Web Vitals", icon: Rocket, desc: "Optimized image delivery, code-splitting, and fast Core Web Vitals" },
   ];
 
   return (
@@ -36,15 +36,15 @@ export function About() {
             className="lg:col-span-6 space-y-6 text-base sm:text-lg text-ink-muted font-light leading-relaxed"
           >
             <p className="text-xl sm:text-2xl text-ink font-normal leading-snug">
-              Based in Mohali, Punjab, I bring <span className="text-accent font-semibold">4 years of professional experience</span> building software that balances high aesthetic ambition with bulletproof reliability.
+              Based in Mohali, Punjab, I bring <span className="text-accent font-semibold">2+ years of professional experience</span> building software that balances high aesthetic ambition with bulletproof reliability.
             </p>
 
             <p>
-              Too often, software suffers from a divide: creative teams make designs that break under real-world data loads, while engineering teams deliver functional tools that feel rigid and uninspired. I work at the intersection of both.
+              I actively integrate AI-assisted developer tooling into my day-to-day workflow — using modern LLMs and intelligent coding agents to rapidly prototype interfaces, automate repetitive boilerplate, diagnose edge cases, and deliver robust production features 2x faster without cutting corners on code quality.
             </p>
 
             <p>
-              Whether it is orchestrating multi-property reservation engines in hospitality, designing zero-fee loan comparison portals in fintech, or crafting bespoke vector experiences for architectural studios, I treat every codebase as a living craft.
+              Whether it is orchestrating multi-property reservation engines in hospitality, designing real-time portfolio management portals in wealthtech, or building regulated fintech comparison platforms, I treat every codebase as a living craft.
             </p>
 
             <div className="p-6 rounded-2xl border border-border bg-bg/80 space-y-3 pt-4">
@@ -58,15 +58,15 @@ export function About() {
                 </div>
                 <div>
                   <span className="text-ink-muted block">Experience:</span>
-                  <span className="text-ink font-medium">4 Years Professional</span>
+                  <span className="text-ink font-medium">2+ Years Professional</span>
                 </div>
                 <div>
                   <span className="text-ink-muted block">Primary Stack:</span>
-                  <span className="text-ink font-medium">Next.js · TS · Node · SQL</span>
+                  <span className="text-ink font-medium">React · Next.js · TS · Tailwind</span>
                 </div>
                 <div>
                   <span className="text-ink-muted block">Availability:</span>
-                  <span className="text-emerald-500 font-medium">Selected Projects</span>
+                  <span className="text-emerald-500 font-medium">Open to Work</span>
                 </div>
               </div>
             </div>
