@@ -23,7 +23,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.6, delay: 0.1 }}
       className="group relative rounded-3xl border border-border bg-bg-secondary/30 overflow-hidden hover:border-accent/50 transition-all duration-500 shadow-xl"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch p-6 sm:p-8 lg:p-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8 lg:p-10">
         {/* Project Content Column */}
         <div
           className={`flex flex-col justify-between space-y-6 ${
@@ -110,11 +110,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Visual Preview / Real Browser Screenshot Column */}
         <div
-          className={`lg:col-span-7 min-h-[340px] sm:min-h-[440px] flex items-center ${
+          className={`lg:col-span-7 flex items-center justify-center ${
             isReversed ? "lg:order-1" : ""
           }`}
         >
-          <ProjectBrowserFrame project={project} className="h-full" />
+          <ProjectBrowserFrame project={project} className="w-full" />
         </div>
       </div>
     </motion.article>

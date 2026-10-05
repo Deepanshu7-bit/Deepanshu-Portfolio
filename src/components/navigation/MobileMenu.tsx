@@ -2,9 +2,8 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowUpRight, Mail, MapPin, Sparkles } from "lucide-react";
+import { X, ArrowUpRight, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import { useTheme } from "../theme/ThemeProvider";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -13,7 +12,6 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
-  const { config, setTheme, setIsCustomizerOpen } = useTheme();
 
   return (
     <AnimatePresence>
@@ -71,29 +69,6 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
 
           {/* Quick Actions & Metadata */}
           <div className="border-t border-border pt-6 space-y-5">
-            <div className="flex items-center justify-between">
-              {/* Theme Quick Toggle */}
-              <button
-                type="button"
-                onClick={() => setTheme(config.mode === "obsidian" ? "ivory" : "obsidian")}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-bg-secondary text-xs font-mono uppercase tracking-wider text-ink"
-              >
-                <span>Theme: {config.mode === "obsidian" ? "Obsidian 🌙" : "Ivory ☀️"}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  onClose();
-                  setIsCustomizerOpen(true);
-                }}
-                className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-accent font-semibold"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                Customize
-              </button>
-            </div>
-
             <div className="space-y-1.5 text-xs text-ink-muted font-mono">
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-accent" />
@@ -108,11 +83,12 @@ export function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProps) {
             </div>
 
             <a
-              href="#contact"
+              href="/Deepanshu_Dhingra_Resume.pdf"
+              download="Deepanshu_Dhingra_Resume.pdf"
               onClick={onClose}
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-accent text-white font-mono text-xs uppercase tracking-widest font-semibold shadow-lg"
             >
-              <span>Let&apos;s Talk</span>
+              <span>Download Resume</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>

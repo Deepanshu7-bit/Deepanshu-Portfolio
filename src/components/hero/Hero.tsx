@@ -86,14 +86,15 @@ export function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </MagneticButton>
 
-            <MagneticButton
-              onClick={scrollToContact}
+            <a
+              href="/Deepanshu_Dhingra_Resume.pdf"
+              download="Deepanshu_Dhingra_Resume.pdf"
               data-cursor="cta"
               className="px-7 py-4 rounded-full border border-border bg-bg-secondary hover:border-accent/60 text-ink font-mono text-xs tracking-wider uppercase font-medium transition-all flex items-center gap-2.5 shadow-sm group cursor-pointer"
             >
-              <span>Let&apos;s Build Something</span>
+              <span>Download Resume</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-accent" />
-            </MagneticButton>
+            </a>
           </motion.div>
 
           {/* Small Trust Micro-Indicator */}
@@ -105,10 +106,10 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
-              <span>4+ Years Production Experience</span>
+              <span>2+ Years Production Experience</span>
             </div>
             <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">Frontend · Backend · Cloud</span>
+            <span className="hidden sm:inline">React · Next.js · TypeScript</span>
           </motion.div>
         </div>
 

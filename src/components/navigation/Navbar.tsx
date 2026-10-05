@@ -10,10 +10,7 @@ const navLinks = [
   { name: "Work", href: "#work" },
   { name: "About", href: "#about" },
   { name: "Philosophy", href: "#philosophy" },
-  { name: "Skills", href: "#skills" },
-  { name: "Capabilities", href: "#capabilities" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Toolkit", href: "#skills" },
 ];
 
 export function Navbar() {
@@ -69,7 +66,7 @@ export function Navbar() {
                 {siteConfig.name}
               </span>
               <span className="text-[10px] font-mono tracking-widest text-ink-muted uppercase">
-                Full Stack Developer
+                Frontend Developer
               </span>
             </div>
           </a>
@@ -99,17 +96,15 @@ export function Navbar() {
 
           {/* Right CTA & Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <MagneticButton
-              onClick={() => {
-                const el = document.getElementById("contact");
-                el?.scrollIntoView({ behavior: "smooth" });
-              }}
+            <a
+              href="/Deepanshu_Dhingra_Resume.pdf"
+              download="Deepanshu_Dhingra_Resume.pdf"
               data-cursor="cta"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-bg text-xs font-mono tracking-wider uppercase font-semibold hover:bg-accent hover:text-white transition-all shadow-md group cursor-pointer"
             >
-              <span>Let&apos;s Talk</span>
+              <span>Download CV</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </MagneticButton>
+            </a>
 
             {/* Mobile Menu Trigger */}
             <button

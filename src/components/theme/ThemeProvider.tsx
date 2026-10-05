@@ -16,7 +16,7 @@ interface ThemeContextType {
 }
 
 const DEFAULT_CONFIG: ThemeConfig = {
-  mode: "obsidian",
+  mode: "ivory",
   accent: "blue",
   motion: "full",
   background: "grain",
@@ -30,13 +30,21 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
 
-  // Initialize from localStorage
+  // Initialize from localStorage or default to Ivory / Electric Blue
   useEffect(() => {
     try {
       const saved = localStorage.getItem("dd_portfolio_theme");
       if (saved) {
         const parsed = JSON.parse(saved);
-        setConfig((prev) => ({ ...prev, ...parsed }));
+        // If previously saved default obsidian, migrate to ivory
+        if (parsed.mode === "obsidian" && !parsed._userCustomized) {
+          setConfig(DEFAULT_CONFIG);
+          localStorage.setItem("dd_portfolio_theme", JSON.stringify(DEFAULT_CONFIG));
+        } else {
+          setConfig((prev) => ({ ...prev, ...parsed }));
+        }
+      } else {
+        localStorage.setItem("dd_portfolio_theme", JSON.stringify(DEFAULT_CONFIG));
       }
     } catch {
       // Ignore localStorage errors
@@ -46,7 +54,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Update DOM attributes whenever config changes
   useEffect(() => {
-    if (!mounted) return;
     const root = document.documentElement;
     root.setAttribute("data-theme", config.mode);
     root.setAttribute("data-accent", config.accent);
@@ -59,10 +66,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.classList.remove("dark");
     }
 
-    try {
-      localStorage.setItem("dd_portfolio_theme", JSON.stringify(config));
-    } catch {
-      // Ignore quota errors
+    if (mounted) {
+      try {
+        localStorage.setItem("dd_portfolio_theme", JSON.stringify(config));
+      } catch {
+        // Ignore quota errors
+      }
     }
   }, [config, mounted]);
 
