@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base CSS Variables for Obsidian (Dark Creative Agency) */
+/* Base CSS Variables for Ivory (Minimal Luxury Studio) - DEFAULT */
 :root,
+[data-theme="ivory"] {
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f2eee6;
+  --bg-tertiary: #e7e1d5;
+  --bg-elevated: #ded6c8;
+  --bg-glass: rgba(250, 248, 245, 0.85);
+  
+  --text-primary: #121214;
+  --text-secondary: #4d4f58;
+  --text-tertiary: #7c7e8b;
+  
+  --border-subtle: rgba(18, 18, 20, 0.09);
+  --border-strong: rgba(18, 18, 20, 0.22);
+  
+  --card-shadow: 0 15px 35px -10px rgba(70, 60, 50, 0.08);
+  --theme-grain-opacity: 0.035;
+  --theme-grid-opacity: 0.04;
+
+  /* Default Electric Blue */
+  --accent-current: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.28);
+  --accent-hover: #1d4ed8;
+  --accent-subtle: rgba(37, 99, 235, 0.12);
+}
+
+/* Base CSS Variables for Obsidian (Dark Creative Agency) */
 [data-theme="obsidian"] {
   --bg-primary: #09090b;
   --bg-secondary: #121216;
@@ -21,40 +47,25 @@
   --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
   --theme-grain-opacity: 0.035;
   --theme-grid-opacity: 0.05;
-}
 
-/* Base CSS Variables for Ivory (Minimal Luxury Studio) */
-[data-theme="ivory"] {
-  --bg-primary: #faf8f5;
-  --bg-secondary: #f2eee6;
-  --bg-tertiary: #e7e1d5;
-  --bg-elevated: #ded6c8;
-  --bg-glass: rgba(250, 248, 245, 0.82);
-  
-  --text-primary: #121214;
-  --text-secondary: #4d4f58;
-  --text-tertiary: #7c7e8b;
-  
-  --border-subtle: rgba(18, 18, 20, 0.09);
-  --border-strong: rgba(18, 18, 20, 0.22);
-  
-  --card-shadow: 0 15px 35px -10px rgba(70, 60, 50, 0.08);
-  --theme-grain-opacity: 0.025;
-  --theme-grid-opacity: 0.04;
-}
-
-/* Accent Color Variations */
-[data-accent="blue"] {
   --accent-current: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.25);
   --accent-hover: #2563eb;
   --accent-subtle: rgba(59, 130, 246, 0.12);
 }
+
+/* Accent Color Variations */
+[data-accent="blue"] {
+  --accent-current: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.28);
+  --accent-hover: #1d4ed8;
+  --accent-subtle: rgba(37, 99, 235, 0.12);
+}
 [data-theme="ivory"][data-accent="blue"] {
-  --accent-current: #1d4ed8;
-  --accent-glow: rgba(29, 78, 216, 0.18);
-  --accent-hover: #1e40af;
-  --accent-subtle: rgba(29, 78, 216, 0.09);
+  --accent-current: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.28);
+  --accent-hover: #1d4ed8;
+  --accent-subtle: rgba(37, 99, 235, 0.12);
 }
 
 [data-accent="violet"] {

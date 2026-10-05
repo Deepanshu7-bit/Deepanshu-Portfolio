@@ -5,10 +5,6 @@ import { Projects } from "@/components/work/Projects";
 import { About } from "@/components/about/About";
 import { Philosophy } from "@/components/philosophy/Philosophy";
 import { TechStack } from "@/components/tech/TechStack";
-import { Capabilities } from "@/components/capabilities/Capabilities";
-import { Experience } from "@/components/experience/Experience";
-import { ResumeCTA } from "@/components/resume/ResumeCTA";
-import { Contact } from "@/components/contact/Contact";
 import { Footer } from "@/components/footer/Footer";
 
 export default function Home() {
@@ -33,10 +29,6 @@ export default function Home() {
         <About />
         <Philosophy />
         <TechStack />
-        <Capabilities />
-        <Experience />
-        <ResumeCTA />
-        <Contact />
       </main>
 
       {/* Minimalist Footer */}
