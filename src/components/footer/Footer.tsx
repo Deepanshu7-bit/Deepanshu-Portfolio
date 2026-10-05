@@ -46,7 +46,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs text-ink-muted font-mono max-w-sm">
-              Full Stack Developer crafting scalable, responsive, and high-performance digital experiences from Mohali, India.
+              Frontend Developer crafting scalable, responsive, and high-performance digital experiences from Mohali, India.
             </p>
             {currentTime && (
               <div className="flex items-center gap-2 text-[11px] font-mono text-ink-muted">
@@ -89,22 +89,17 @@ export function Footer() {
 
             <div>
               <span className="text-[10px] uppercase tracking-widest text-ink-faint block mb-3">
-                Overview
+                Connect
               </span>
               <ul className="space-y-2">
                 <li>
-                  <a href="#capabilities" className="text-ink-muted hover:text-accent transition-colors">
-                    Capabilities
-                  </a>
-                </li>
-                <li>
-                  <a href="#experience" className="text-ink-muted hover:text-accent transition-colors">
-                    Experience
-                  </a>
-                </li>
-                <li>
                   <a href="#contact" className="text-ink-muted hover:text-accent transition-colors">
-                    Contact
+                    Start a Project
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${siteConfig.email}`} className="text-ink-muted hover:text-accent transition-colors">
+                    Direct Email
                   </a>
                 </li>
               </ul>
