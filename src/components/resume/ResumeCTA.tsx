@@ -125,7 +125,7 @@ export function ResumeCTA() {
                   <FileText className="w-5 h-5 text-accent" />
                   <div>
                     <h3 className="text-base font-bold text-ink font-display">Deepanshu Dhingra</h3>
-                    <p className="text-xs text-ink-muted">Frontend Developer · 2+ Years Experience</p>
+                    <p className="text-xs text-ink-muted">Frontend Developer · 1.5+ Years Experience</p>
                   </div>
                 </div>
                 <button
@@ -144,7 +144,7 @@ export function ResumeCTA() {
                     Professional Summary
                   </h4>
                   <p className="text-ink-muted">
-                    Frontend Developer based in Mohali, Punjab with 2+ years of hands-on experience building fast, scalable, and responsive web applications. Specialized in React.js, Next.js, TypeScript, GSAP animations, Tailwind CSS, and robust state management.
+                    Frontend Developer based in Mohali, Punjab with 1.5+ years of hands-on experience building fast, scalable, and responsive web applications. Specialized in React.js, Next.js, TypeScript, GSAP animations, Tailwind CSS, and robust state management.
                   </p>
                 </div>
 
@@ -159,7 +159,7 @@ export function ResumeCTA() {
                     </div>
                     <div className="p-3 rounded-lg bg-bg-secondary border border-border">
                       <span className="font-semibold text-ink block mb-1">State &amp; Architecture:</span>
-                      Redux Toolkit, TanStack Query, Context API, Formik, React Hook Form, Zod, REST APIs, GraphQL, WebSockets
+                      Zustand, Context API, React Hook Form, Zod, REST APIs, GraphQL, WebSockets
                     </div>
                   </div>
                 </div>
@@ -170,9 +170,9 @@ export function ResumeCTA() {
                   </h4>
                   <ul className="space-y-2.5 text-xs text-ink-muted">
                     <li>• <strong>NuGen Atria</strong>: Hospitality SaaS admin dashboard &amp; guest portal with WebSocket feeds and real-time room status.</li>
+                    <li>• <strong>Money Parking (FundPilot)</strong>: Mutual fund tracking platform featuring real-time XIRR calculations, interactive tables, and Zustand state management.</li>
+                    <li>• <strong>CapGro Finex</strong>: Fintech platform with interactive EMI calculators, GSAP ScrollTrigger reveals, and Zod validation.</li>
                     <li>• <strong>Arrive Hotels</strong>: Luxury hospitality platform (Palisociety) with Next.js, GSAP animations, and GraphQL / REST APIs.</li>
-                    <li>• <strong>CapGro Finex</strong>: Fintech platform with interactive EMI calculators, GSAP ScrollTrigger reveals, and Formik/Zod validation.</li>
-                    <li>• <strong>Money Parking (FundPilot)</strong>: Mutual fund tracking platform featuring real-time XIRR calculations, interactive tables, and Redux Toolkit.</li>
                   </ul>
                 </div>
 
@@ -180,8 +180,11 @@ export function ResumeCTA() {
                   <h4 className="font-mono text-xs font-bold uppercase text-accent tracking-wider mb-2">
                     Education
                   </h4>
-                  <p className="text-xs text-ink-muted font-mono">
+                  <p className="text-xs text-ink-muted font-mono font-medium">
                     Bachelor of Computer Applications (BCA)
+                  </p>
+                  <p className="text-[11px] text-ink-muted font-mono mt-1">
+                    Key Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Web Technologies
                   </p>
                 </div>
 

@@ -95,12 +95,12 @@ export function Navbar() {
           </nav>
 
           {/* Right CTA & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/Deepanshu_Dhingra_Resume.pdf"
               download="Deepanshu_Dhingra_Resume.pdf"
               data-cursor="cta"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-bg text-xs font-mono tracking-wider uppercase font-semibold hover:bg-accent hover:text-white transition-all shadow-md group cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-bg text-xs font-mono tracking-wider uppercase font-semibold hover:bg-accent hover:text-white transition-all shadow-md group cursor-pointer"
             >
               <span>Download CV</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -86,7 +86,7 @@ export function HeroVisual() {
           Deepanshu Dhingra
         </div>
         <p className="text-[11px] text-ink-muted mt-1 leading-relaxed">
-          2+ Years of resilient frontend interfaces, interactive design &amp; web performance.
+          1.5+ Years of resilient frontend interfaces, interactive design &amp; web performance.
         </p>
         <div className="mt-4 pt-3 border-t border-border flex items-center justify-center gap-2 text-[10px] font-mono text-ink-faint">
           <Shield className="w-3 h-3 text-accent" />
