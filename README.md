@@ -20,11 +20,11 @@ A high-end, conversion-focused personal portfolio website engineered for **Deepa
   - Live real-time controls for Theme (Obsidian / Ivory), Accent color (Blue, Violet, Orange, Green), Motion profile, Canvas texture (Grain, Grid, Solid), and Cursor mode.
   - Automatic `localStorage` persistence with 1-click Reset.
 - **Selected Work**:
+  - **Nugen Atria**: Cloud-native hotel management OS (PMS) & guest mobile ordering SaaS.
+  - **Money Parking**: Mutual fund distributor dashboard and portfolio tracking platform.
   - **CapGro Finex**: Multi-vertical loan & mutual fund distribution platform with zero customer fees.
-  - **Prime Arc Studio**: Contemporary interior architecture & spatial design showcase with CAD vectors.
   - **Arya Dental Care**: Super-speciality dental clinic platform with digital appointment workflows.
   - **Arrive Hotels**: Boutique hotel platform across 5 US destinations by Palisociety.
-  - **Nugen Atria**: Cloud-native hotel management OS (PMS) & guest mobile ordering SaaS.
 - **View Mode Switcher & Category Filters**:
   - Grid View & Listing View options.
   - Interactive filter pills (Fintech, Architecture, Healthcare, Hospitality, Commercial, SaaS).
