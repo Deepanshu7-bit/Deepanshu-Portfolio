@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "DD.",
   role: "Frontend Developer",
   location: "Mohali, Punjab, India",
-  experienceYears: "2+ Years",
+  experienceYears: "1.5+ Years",
   email: "dhingradeepanshu400@gmail.com",
   status: "Open to Work",
   hero: {
@@ -15,7 +15,7 @@ export const siteConfig = {
     ctaSecondary: "Let's Build Something",
   },
   stats: [
-    { value: "2+", label: "Years Experience", description: "Production frontend engineering" },
+    { value: "1.5+", label: "Years Experience", description: "Production frontend engineering" },
     { value: "5", label: "Featured Projects", description: "Shipped commercial web applications" },
     { value: "4", label: "Industry Domains", description: "Fintech, SaaS, Hospitality, Healthcare" },
     { value: "100%", label: "Responsive & Modern", description: "Next.js, TypeScript & Tailwind CSS" },
@@ -28,12 +28,11 @@ export const siteConfig = {
     "ScrollTrigger",
     "Tailwind CSS",
     "Material UI",
-    "Redux Toolkit",
-    "TanStack Query",
+    "Zustand",
     "GraphQL",
     "REST APIs",
     "WebSockets",
-    "Formik & Zod",
+    "Zod",
     "Vercel",
   ],
   socials: {
