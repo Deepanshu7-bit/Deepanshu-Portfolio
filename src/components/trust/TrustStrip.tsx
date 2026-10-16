@@ -20,7 +20,7 @@ export function TrustStrip() {
               <span>Proven Experience</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-ink font-editorial">
-              2+ Years Building For The Modern Web
+              1.5+ Years Building For The Modern Web
             </h2>
           </div>
           <p className="text-sm text-ink-muted max-w-md font-light leading-relaxed">
