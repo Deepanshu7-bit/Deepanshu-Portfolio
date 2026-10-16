@@ -22,14 +22,12 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "state-data",
-    name: "State & Data Fetching",
-    description: "Client state, server cache synchronization & form architecture",
+    name: "State & Data Management",
+    description: "Client state architecture, context isolation & form validation",
     iconName: "Layers",
     skills: [
-      { name: "Redux Toolkit", level: "Advanced", highlight: true },
-      { name: "TanStack Query", level: "Advanced", highlight: true },
-      { name: "Context API", level: "Advanced" },
-      { name: "Formik", level: "Advanced", highlight: true },
+      { name: "Zustand", level: "Advanced", highlight: true },
+      { name: "Context API", level: "Advanced", highlight: true },
       { name: "React Hook Form", level: "Advanced", highlight: true },
       { name: "Zod Schema Validation", level: "Advanced", highlight: true },
     ],
@@ -55,12 +53,10 @@ export const skillCategories: SkillCategory[] = [
     iconName: "Wrench",
     skills: [
       { name: "Git & GitHub", level: "Advanced", highlight: true },
-      { name: "AI Dev Tooling (LLMs / Agents)", level: "Advanced", highlight: true },
       { name: "Vite", level: "Advanced", highlight: true },
       { name: "Webpack", level: "Proficient" },
       { name: "Vercel", level: "Advanced", highlight: true },
       { name: "Figma (UI/UX Handoff)", level: "Proficient", highlight: true },
-      { name: "VS Code", level: "Advanced" },
     ],
   },
 ];

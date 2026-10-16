@@ -8,8 +8,8 @@ import { Bot, CheckCircle2, Code, Cpu, Globe, Rocket, Shield, Sparkles, Terminal
 export function About() {
   const focusAreas = [
     { label: "Modern React & Next.js", icon: Globe, desc: "Next.js App Router, React 19, and server/client component architectures" },
-    { label: "AI-Augmented Development", icon: Sparkles, desc: "Leveraging cutting-edge AI tools to accelerate iteration velocity, test coverage, and code precision" },
-    { label: "State & API Integration", icon: Terminal, desc: "Predictable data fetching with TanStack Query, Redux Toolkit, and REST APIs" },
+    { label: "TypeScript & Code Quality", icon: Shield, desc: "Strict type safety, modular component interfaces, and clean maintainable codebases" },
+    { label: "State & API Integration", icon: Terminal, desc: "Predictable client state with Zustand, Context API, and resilient REST APIs" },
     { label: "Responsive Design Systems", icon: Code, desc: "Design tokens, Tailwind CSS, mobile-first responsive grid layouts" },
     { label: "Interactive Animations", icon: Cpu, desc: "Smooth micro-interactions and transitions with GSAP and Framer Motion" },
     { label: "Performance & Web Vitals", icon: Rocket, desc: "Optimized image delivery, code-splitting, and fast Core Web Vitals" },
@@ -36,11 +36,11 @@ export function About() {
             className="lg:col-span-6 space-y-6 text-base sm:text-lg text-ink-muted font-light leading-relaxed"
           >
             <p className="text-xl sm:text-2xl text-ink font-normal leading-snug">
-              Based in Mohali, Punjab, I bring <span className="text-accent font-semibold">2+ years of professional experience</span> building software that balances high aesthetic ambition with bulletproof reliability.
+              Based in Mohali, Punjab, I bring <span className="text-accent font-semibold">1.5+ years of professional experience</span> building software that balances high aesthetic ambition with bulletproof reliability.
             </p>
 
             <p>
-              I actively integrate AI-assisted developer tooling into my day-to-day workflow — using modern LLMs and intelligent coding agents to rapidly prototype interfaces, automate repetitive boilerplate, diagnose edge cases, and deliver robust production features 2x faster without cutting corners on code quality.
+              I specialize in architecting modular, scalable frontend architectures with clean separation of concerns. From implementing type-safe component systems to engineering fluid motion and responsive user journeys, I focus on delivering robust production features with speed and precision.
             </p>
 
             <p>
@@ -58,7 +58,7 @@ export function About() {
                 </div>
                 <div>
                   <span className="text-ink-muted block">Experience:</span>
-                  <span className="text-ink font-medium">2+ Years Professional</span>
+                  <span className="text-ink font-medium">1.5+ Years Professional</span>
                 </div>
                 <div>
                   <span className="text-ink-muted block">Primary Stack:</span>
