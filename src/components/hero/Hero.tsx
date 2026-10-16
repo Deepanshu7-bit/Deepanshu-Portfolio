@@ -106,7 +106,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
-              <span>2+ Years Production Experience</span>
+              <span>1.5+ Years Production Experience</span>
             </div>
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">React · Next.js · TypeScript</span>
