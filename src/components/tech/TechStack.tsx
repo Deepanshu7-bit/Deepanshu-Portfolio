@@ -12,7 +12,7 @@ export function TechStack() {
           number="04"
           category="TECHNICAL TOOLKIT"
           title="Engineered for frontend precision."
-          subtitle="A comprehensive inventory of modern languages, libraries, databases, and infrastructure tools backed by 2+ years of hands-on production code."
+          subtitle="A comprehensive inventory of modern languages, libraries, databases, and infrastructure tools backed by 1.5+ years of hands-on production code."
         />
 
         {/* Interactive Constellation Hub */}

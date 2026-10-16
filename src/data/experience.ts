@@ -3,36 +3,19 @@ import { ExperienceItem } from "@/types";
 export const experienceData: ExperienceItem[] = [
   {
     id: "exp-1",
-    period: "2023 — Present",
-    role: "Senior Frontend Developer",
-    companyOrScope: "High-Growth Product Development & Client Architecture",
-    location: "Mohali, Punjab, India",
-    industry: "Hospitality, SaaS, Fintech",
-    summary:
-      "Leading frontend application architecture and end-to-end user experience delivery for high-traffic client platforms, hotel management operating systems, and regulated financial portals.",
-    highlights: [
-      "Architected and deployed responsive Next.js applications with Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR), boosting page speeds significantly.",
-      "Engineered high-throughput NestJS and Express REST APIs with PostgreSQL and MongoDB database persistence.",
-      "Implemented live event-driven WebSocket channels for real-time room status updates and in-stay hospitality service orders.",
-      "Containerized microservices using Docker and established automated CI/CD deployment pipelines on AWS and Vercel.",
-    ],
-    technologies: ["Next.js", "React", "TypeScript", "Node.js", "NestJS", "PostgreSQL", "Docker", "AWS"],
-  },
-  {
-    id: "exp-2",
-    period: "2022 — 2023",
+    period: "1.5+ Years Total Experience",
     role: "Frontend Developer",
-    companyOrScope: "Product Engineering & Enterprise Applications",
-    location: "Mohali / Chandigarh Region, India",
-    industry: "Healthcare, Wealthtech & Financial Services",
+    companyOrScope: "Product Engineering & Commercial Platforms",
+    location: "Mohali, Punjab, India",
+    industry: "Fintech, Hospitality & SaaS Domains",
     summary:
-      "Engineered specialized web solutions ranging from healthcare patient management funnels to mutual fund distribution workflows and financial portals.",
+      "Developed and maintained modern, responsive frontend web applications across fintech, hospitality, and SaaS domains. Focused on building reusable UI component libraries with React.js, Next.js, and TypeScript, implementing interactive UI features with GSAP and CSS, managing client state with Zustand, and connecting frontend views with backend REST/GraphQL APIs.",
     highlights: [
-      "Built resilient, accessibility-compliant user interfaces with React, Tailwind CSS, and custom Framer Motion animations.",
-      "Integrated third-party authentication protocols, role-based access control (RBAC), and JWT token refresh flows.",
-      "Optimized frontend bundle sizes, asset delivery pipelines, and Core Web Vitals to achieve sub-second load times.",
-      "Collaborated closely with designers, product managers, and QA teams in fast-paced Agile sprint cycles.",
+      "Built reusable, accessible UI component hierarchies in React.js, Next.js, and TypeScript using Tailwind CSS for scalable design systems.",
+      "Structured lightweight client-side state architecture using Zustand, eliminating redundant re-renders and improving overall screen responsiveness.",
+      "Integrated backend REST and GraphQL APIs with robust client validation, handling real-time WebSocket feeds and error boundary safeguards.",
+      "Collaborated with design teams via Figma to translate complex interactive wireframes into pixel-perfect, mobile-first web applications.",
     ],
-    technologies: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Redux Toolkit"],
+    technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Zustand", "GSAP", "REST APIs", "GraphQL", "WebSockets", "Figma"],
   },
 ];
